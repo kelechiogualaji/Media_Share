@@ -28,6 +28,7 @@ jobs:
           mkdir -p release
           
           # 2. Copy the standalone server files to the root of the release folder
+          # This ensures server.js is at /home/site/wwwroot/server.js
           cp -r .next/standalone/. release/
           
           # 3. Copy static and public assets so images/CSS work
@@ -40,14 +41,11 @@ jobs:
         with:
           name: node-app
           path: release
-          include-hidden-files: true # ✅ CRITICAL: Includes the .next folder
+          include-hidden-files: true # ✅ REQUIRED for .next folder
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    permissions:
-      id-token: write
-      contents: read
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
@@ -62,3 +60,5 @@ jobs:
           slot-name: 'Production'
           package: release
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34AFD70BF9BB4323BAE9AF50ADDB5738 }}
+          # ✅ This forces Azure to run the right file even if the CLI was blocked
+          startup-command: 'node server.js'
