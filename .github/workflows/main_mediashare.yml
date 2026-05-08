@@ -60,5 +60,4 @@ jobs:
           slot-name: 'Production'
           package: release
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34AFD70BF9BB4323BAE9AF50ADDB5738 }}
-          # ✅ This forces Azure to run the right file even if the CLI was blocked
-          startup-command: 'node server.js'
+          
