@@ -1,0 +1,112 @@
+.hero {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
+.heroInner {
+  max-width: 800px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 0.6s ease;
+}
+
+.heroDesc {
+  font-size: 1.125rem;
+  color: #9d9db5;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  animation: fadeInUp 0.7s ease;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.8s ease;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #7c3aed, #a855f7, #ec4899);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 250ms ease;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #f0f0f5;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 250ms ease;
+}
+
+.btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  animation: fadeInUp 0.9s ease;
+}
+
+.featureCard {
+  background: rgba(20, 20, 35, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 250ms ease;
+}
+
+.featureCard:hover {
+  border-color: rgba(168, 85, 247, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.featureIcon { font-size: 2.5rem; margin-bottom: 0.75rem; display: block; }
+.featureTitle { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.featureDesc { font-size: 0.8rem; color: #5c5c78; line-height: 1.5; }
+
+@media (max-width: 640px) {
+  .heroTitle { font-size: 2.2rem; }
+  .features { grid-template-columns: repeat(2, 1fr); }
+}

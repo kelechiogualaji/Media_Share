@@ -1,0 +1,119 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 1000;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f0f0f5;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: transform 150ms ease;
+}
+
+.brand:hover { transform: scale(1.02); }
+
+.logo { font-size: 1.8rem; line-height: 1; }
+
+.title {
+  background: linear-gradient(135deg, #7c3aed, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #7c3aed, #a855f7, #ec4899);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 250ms ease;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.actionBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+}
+
+.userBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: #9d9db5;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  transition: all 150ms ease;
+}
+
+.userBadge:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f0f0f5;
+}
+
+.rolePill {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #7c3aed, #a855f7, #ec4899);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ghostBtn {
+  background: none;
+  border: none;
+  color: #9d9db5;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.875rem;
+  transition: color 150ms ease;
+}
+
+.ghostBtn:hover {
+  color: #f0f0f5;
+}
+
+@media (max-width: 640px) {
+  .userBadge { display: none; }
+}

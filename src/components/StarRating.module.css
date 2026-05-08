@@ -1,0 +1,13 @@
+.rating { display: inline-flex; gap: 4px; }
+.readonly .star { cursor: default !important; }
+.readonly .star:hover { transform: none !important; }
+.star {
+  cursor: pointer;
+  transition: transform 150ms ease;
+  filter: grayscale(1) opacity(0.3);
+}
+.star:hover { transform: scale(1.2); }
+.filled { filter: none; }
+.sm .star { font-size: 1rem; }
+.md .star { font-size: 1.4rem; }
+.lg .star { font-size: 1.8rem; }
